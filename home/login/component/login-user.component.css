@@ -1,0 +1,15 @@
+/* Material CSS */
+
+  .login-form-outer-width {
+    width: 50%;
+  }
+
+  .login-header-div {
+    width: 40%;
+    color: blueviolet;
+    text-align: center;
+  }
+
+  .login-form-field-width {
+    width: 50%;
+  }

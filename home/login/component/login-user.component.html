@@ -1,0 +1,35 @@
+<!-- <form [formGroup]="loginUserForm" (ngSubmit)="onLoginUserFormSubmit()">
+  <mat-form-field class="login-form-full-width ">
+    <input matInput placeholder="Enter Email" formControlName="email">
+
+  </mat-form-field>
+</form> -->
+
+<form [formGroup]="loginUserForm" (ngSubmit)="onLoginUserFormSubmit()">
+  <div class="login-form-outer-width">
+    <mat-form-field class="login-form-field-width">
+      <input type="email" matInput placeholder="Enter Email" formControlName="email">
+    </mat-form-field>
+  </div>
+  <div class="login-form-outer-width">
+    <mat-form-field class="login-form-field-width">
+      <input matInput type="password" placeholder="Enter Password" formControlName="password">
+    </mat-form-field>
+  </div>
+  <div class="login-form-outer-width">
+    <button mat-raised-button color="accent">Login Here</button>
+  </div>
+</form>
+
+<div *ngIf="statusCode">
+  <div *ngIf="statusCode === 201" [ngClass]="'success'">
+    User added successfully.
+  </div>
+  <div *ngIf="statusCode === 409" [ngClass]="'success'">
+    User already exists.
+  </div>
+
+  <div *ngIf="statusCode === 500" [ngClass]="'error'">
+    Internal Server Error.
+  </div>
+</div>
